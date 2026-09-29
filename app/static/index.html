@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Risk Predictor</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="header">
+            <h1>Customer Risk Predictor</h1>
+            <p>Insurance Claim Fraud Detection</p>
+        </div>
+
+        <form id="claim-form">
+
+            <div class="form-group">
+                <label for="claim_amount">Claim Amount</label>
+                <input type="number" id="claim_amount" required>
+            </div>
+
+            <div class="form-group">
+                <label for="customer_age">Customer Age</label>
+                <input type="number" id="customer_age" required>
+            </div>
+
+            <div class="form-group">
+                <label for="previous_claims">Previous Claims</label>
+                <input type="number" id="previous_claims" required>
+            </div>
+
+            <div class="form-group">
+                <label for="vehicle_age">Vehicle Age</label>
+                <input type="number" id="vehicle_age" required>
+            </div>
+
+            <div class="form-group">
+                <label for="policy_age">Policy Age</label>
+                <input type="number" id="policy_age" required>
+            </div>
+
+            <button type="submit">Predict Risk</button>
+
+        </form>
+
+        <div id="result" class="result hidden">
+            <h2 id="prediction"></h2>
+
+            <p>
+                Fraud Probability:
+                <strong id="fraud-probability"></strong>
+            </p>
+
+            <p>
+                Not Fraud Probability:
+                <strong id="not-fraud-probability"></strong>
+            </p>
+        </div>
+
+    </div>
+
+    <script src="/static/app.js"></script>
+
+</body>
+</html>
